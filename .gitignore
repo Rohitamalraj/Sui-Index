@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# Build outputs
+dist/
+.next/
+out/
+build/
+*.tsbuildinfo
+
+# Backend runtime cache
+backend/.blob-cache.json
+backend/.price-cache.json
+
+# Logs & OS
+*.log
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Move / Sui
+contracts/build/
+
+# Vercel
+.vercel
+
+# Test / coverage
+coverage/
