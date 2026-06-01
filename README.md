@@ -6,38 +6,6 @@
 
 ---
 
-## Demo
-
-| | |
-|---|---|
-| **Live dApp** | [Hosted on Walrus Sites](#) *(link after mainnet deploy)* |
-| **Demo Video** | [Submission video](#) |
-| **Testnet Package** | `0x9bf79de2a40a3885da61367512b199725a7233ec7892e9ce2dc2277dcc1d1087` |
-| **Network** | Sui Testnet |
-
----
-
-## Table of Contents
-
-1. [What is Sui-Index?](#1-what-is-sui-index)
-2. [Market Opportunity](#2-market-opportunity)
-3. [The Problem — Why Now?](#3-the-problem--why-now)
-4. [The Solution](#4-the-solution)
-5. [Why Sui-Index Beats Existing Protocols](#5-why-sui-index-beats-existing-protocols)
-6. [How Tatum Powers Sui-Index](#6-how-tatum-powers-sui-index)
-7. [How Walrus is Used](#7-how-walrus-is-used)
-8. [Architecture](#8-architecture)
-9. [Full Sequence Flow](#9-full-sequence-flow)
-10. [Smart Contracts](#10-smart-contracts)
-11. [Tech Stack](#11-tech-stack)
-12. [Repository Structure](#12-repository-structure)
-13. [Local Development](#13-local-development)
-14. [Deployed Contracts](#14-deployed-contracts)
-15. [Supported Assets](#15-supported-assets)
-16. [Links](#16-links)
-
----
-
 ## 1. What is Sui-Index?
 
 Sui-Index is an on-chain **crypto index duel game** on Sui. Players don't bet yes or no on future events. Instead, they build a custom weighted portfolio of crypto assets and compete 1v1 — the better-performing index wins the prize pool.
