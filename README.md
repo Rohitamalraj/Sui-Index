@@ -6,6 +6,34 @@
 
 ---
 
+## Deployed Contracts
+
+### 🟢 Sui Mainnet
+> Deployed 2026-06-05
+
+| Contract | Address |
+|---|---|
+| Package | `0xc5ce3bfaadba2e8c54a634d850f42748ab7bb44115569a47e8b3496342852375` |
+| AdminCap | `0xfaeeafe845f8ed352fd940075ec3f7cedc773052f8af72d4f3af3b41132d12b2` |
+| IndexRegistry | `0x68290820cfc63a282056fc768a3eebb37ee753e2213cf2d7cd441ab597b5996a` |
+| DuelRegistry | `0xa453ac07a97aa00d86d19df452d6be0f7a92bc6848998bc15770a80c1f18a25b` |
+
+> Explorer: [suivision.xyz](https://suivision.xyz/package/0xc5ce3bfaadba2e8c54a634d850f42748ab7bb44115569a47e8b3496342852375)
+
+### 🔵 Sui Testnet
+> Deployed 2026-05-31
+
+| Contract | Address |
+|---|---|
+| Package | `0x9bf79de2a40a3885da61367512b199725a7233ec7892e9ce2dc2277dcc1d1087` |
+| AdminCap | `0xaf6ae93047fb942e76cdd71d06cb3135b4ca19a1d23a3fe386ce5c74c108b748` |
+| IndexRegistry | `0x5093ab467fbbb3d4ea3f63860963249619e603913fced6d2c24e4c116f26b1d6` |
+| DuelRegistry | `0xdc652ce5f61671a4824672609d88331e53934c366b752a16edca0e0ff10acb2c` |
+
+> Explorer: [testnet.suivision.xyz](https://testnet.suivision.xyz)
+
+---
+
 ## 1. What is Sui-Index?
 
 Sui-Index is an on-chain **crypto index duel game** on Sui. Players don't bet yes or no on future events. Instead, they build a custom weighted portfolio of crypto assets and compete 1v1 — the better-performing index wins the prize pool.
@@ -619,29 +647,7 @@ bash scripts/start-all.sh
 
 ## 14. Deployed Contracts
 
-### Sui Testnet
-> Deployed 2026-05-31
-
-| Contract | Address |
-|---|---|
-| Package | `0x9bf79de2a40a3885da61367512b199725a7233ec7892e9ce2dc2277dcc1d1087` |
-| AdminCap | `0xaf6ae93047fb942e76cdd71d06cb3135b4ca19a1d23a3fe386ce5c74c108b748` |
-| IndexRegistry | `0x5093ab467fbbb3d4ea3f63860963249619e603913fced6d2c24e4c116f26b1d6` |
-| DuelRegistry | `0xdc652ce5f61671a4824672609d88331e53934c366b752a16edca0e0ff10acb2c` |
-
-> Explorer: [testnet.suivision.xyz](https://testnet.suivision.xyz)
-
-### Sui Mainnet
-> Deployed 2026-06-05
-
-| Contract | Address |
-|---|---|
-| Package | `0xc5ce3bfaadba2e8c54a634d850f42748ab7bb44115569a47e8b3496342852375` |
-| AdminCap | `0xfaeeafe845f8ed352fd940075ec3f7cedc773052f8af72d4f3af3b41132d12b2` |
-| IndexRegistry | `0x68290820cfc63a282056fc768a3eebb37ee753e2213cf2d7cd441ab597b5996a` |
-| DuelRegistry | `0xa453ac07a97aa00d86d19df452d6be0f7a92bc6848998bc15770a80c1f18a25b` |
-
-> Explorer: [suivision.xyz](https://suivision.xyz) · [Package on SuiVision](https://suivision.xyz/package/0xc5ce3bfaadba2e8c54a634d850f42748ab7bb44115569a47e8b3496342852375)
+> See contract addresses at the [top of this README](#deployed-contracts) — Mainnet (2026-06-05) and Testnet (2026-05-31).
 
 ---
 
