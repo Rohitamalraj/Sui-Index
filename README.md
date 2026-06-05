@@ -110,47 +110,30 @@ BUILD (Pick assets + weights)
 
 ---
 
-## 5. Why Sui-Index Beats Existing Protocols
+## 5. Competitive Landscape — What Makes Sui-Index Unique
 
-### Regulatory Moat — Competitors Are Getting Banned in Real Time
+A feature-by-feature breakdown across the dimensions that actually matter to judges and users.
 
-Sui-Index sidesteps the regulatory problem on two levels:
+| Feature | Polymarket | Kalshi | Augur | **Sui-Index** |
+|---|---|---|---|---|
+| **Strategy Depth** | ✕ Yes/No only | ✕ Yes/No only | ✕ Yes/No only | ✅ Full weighted index across 3–8 assets |
+| **Bot Resistance** | ✕ 100K+ users lost $1K+ to bots | ✕ High bot exposure | ~ Moderate | ✅ Index locked at duel start — no live order book |
+| **Regulatory Safety** | ✕ Banned in 33+ countries | ~ US only (CFTC-licensed) | ~ Grey area | ✅ Index game framing — not event gambling |
+| **Social Layer** | ✕ None | ✕ None | ✕ None | ✅ Profiles, leaderboards, shareable index cards |
+| **Censorship Resistance** | ✕ ISP-blockable domain | ✕ Centralized server | ~ Partial | ✅ Full dApp hosted on Walrus — no DNS to block |
+| **Decentralized Storage** | ✕ Centralized | ✕ Centralized | ✕ On-chain (expensive) | ✅ Walrus blob storage — cheap, native to Sui |
+| **Game Layer** | ✕ None | ✕ None | ✕ None | ✅ 1v1 duels + tournaments + rematches |
+| **Chain** | Polygon | Centralized | Ethereum | ✅ Sui — fastest-growing L1 |
 
-1. **Product framing.** Index performance duels between consenting players using public price data maps to a less hostile legal category than binary event betting. Courts have consistently treated skill-based portfolio competition differently from "gambling on uncertain future outcomes."
+### Key Differentiators
 
-2. **Censorship-resistant hosting.** The entire dApp frontend lives on Walrus. There is no central domain for a government to block, no centralized server to seize, and no hosting provider to pressure. Spain and India blocked Polymarket at the DNS/ISP level — that attack vector does not exist against a Walrus-hosted site.
+**🛡️ Regulatory Safety** — Index duels are framed as skill-based games, not event gambling, avoiding the legal classification that got Polymarket banned in 33+ countries and counting.
 
-### Expression over Binary
+**🤖 Bot Resistance** — Indexes are locked at duel creation. There is no live order book for bots to exploit. Strategy beats latency.
 
-Every incumbent reduces user strategy to a single yes/no answer. Sui-Index gives players a full 100 percentage points to allocate across up to 8 assets — encoding market conviction, risk appetite, and diversification strategy in a single move. That richness creates replay value, discussion, and reputation that binary markets cannot generate.
+**🌊 Walrus Storage** — Index history, leaderboards, duel metadata, and the full dApp frontend live on Walrus — no central server to block or seize.
 
-### More Resistant to Bot Exploitation
-
-- Index composition is **locked at duel start** — no live order book for bots to pick off
-- The game resolves on aggregate weighted performance, not micro-second price movements where bots dominate
-- 1v1 or small-group format means you always compete against a **known human opponent**, not an anonymous liquidity pool
-
-### Social Layer That Competitors Don't Have
-
-Every index ever built is stored on Walrus — permanently, verifiably, publicly. This creates:
-
-- **Player profiles** with win rate, best index, and total return history — all on-chain and tamper-proof
-- **Shareable index cards** designed for X and LinkedIn
-- **Rivalries and rematches** — challenge the same opponent again after a loss
-- **Themed tournaments** ("AI coins only", "Layer 1 battle", "DeFi Summer") that create natural social moments
-
-### Summary Table
-
-| Dimension | Polymarket / Kalshi / Augur | Sui-Index |
-|---|---|---|
-| Regulatory exposure | Banned in 33+ countries, active ISP blocks | Index game framing + Walrus frontend = no DNS target |
-| Strategy depth | 1-bit yes/no decision | 100% allocation across 3–8 assets |
-| Bot resistance | 100K+ retail accounts lost $1K+ to bots | Locked index at start — no live order book to exploit |
-| Social identity | None — anonymous trades, no reputation | Walrus-stored player history, index cards, leaderboards |
-| Storage model | Centralized (Polymarket/Kalshi) or expensive on-chain (Augur) | Walrus: decentralized, cheap, native to Sui |
-| Censorship resistance | ISP-blockable domains | Full dApp on Walrus — no central server to block |
-| Replayability | One-time market participation | Duels, tournaments, themed rounds, rematches |
-| Chain | Polygon / Centralized / Ethereum | Sui — fastest-growing L1, native Walrus storage |
+**⚡ Tatum RPC** — Every Sui RPC call routes through Tatum's enterprise gateway — 99.99% uptime, geo-load balanced, sub-50ms latency.
 
 ---
 
