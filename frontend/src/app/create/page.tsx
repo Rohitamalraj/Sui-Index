@@ -243,6 +243,8 @@ export default function CreateDuelPage() {
               <div className="flex flex-col gap-3 p-6 bg-[#111111] border border-[#1E1E1E]">
                 <span className="font-ibm-mono text-[10px] font-bold text-[#888] tracking-[2px]">ENTRY AMOUNT (SUI)</span>
                 <p className="font-ibm-mono text-[9px] text-[#444] tracking-[1px] -mt-1">FRACTIONAL SUI SUPPORTED</p>
+
+                {/* Quick-pick presets */}
                 <div className="flex gap-[2px]">
                   {AMOUNTS.map((amt) => (
                     <button
@@ -261,6 +263,39 @@ export default function CreateDuelPage() {
                     </button>
                   ))}
                 </div>
+
+                {/* Custom amount input */}
+                <div
+                  className="flex items-center h-[52px] px-4 gap-3 bg-[#0D0D0D] border-2 transition-colors"
+                  style={{
+                    borderColor: !AMOUNTS.includes(entryAmount) && entryAmount !== ""
+                      ? "#FFD600"
+                      : "#1E1E1E",
+                  }}
+                >
+                  <span className="font-ibm-mono text-[10px] text-[#444] tracking-[1px] shrink-0">CUSTOM</span>
+                  <input
+                    type="number"
+                    min="0.01"
+                    step="0.01"
+                    placeholder="e.g. 3.5"
+                    value={entryAmount}
+                    onChange={(e) => {
+                      const v = e.target.value;
+                      if (v === "" || Number(v) >= 0) setEntryAmount(v);
+                    }}
+                    className="flex-1 bg-transparent font-grotesk text-[18px] font-bold text-[#F5F5F0] tracking-[-0.5px] outline-none placeholder-[#2A2A2A] w-full min-w-0"
+                    style={{ appearance: "textfield" }}
+                  />
+                  <span className="font-ibm-mono text-[12px] text-[#444] shrink-0">SUI</span>
+                </div>
+
+                {/* Validation */}
+                {entryAmount !== "" && Number(entryAmount) <= 0 && (
+                  <p className="font-ibm-mono text-[10px] text-[#FF5F57] tracking-[1px] -mt-1">
+                    AMOUNT MUST BE GREATER THAN 0
+                  </p>
+                )}
               </div>
 
               {/* Duration */}
@@ -307,9 +342,19 @@ export default function CreateDuelPage() {
               {/* CTA */}
               <button
                 onClick={() => setStep("confirm")}
-                className="flex items-center justify-center w-full h-[52px] bg-[#FFD600] hover:bg-[#e6c200] transition-colors border-none cursor-pointer"
+                disabled={!entryAmount || Number(entryAmount) <= 0}
+                className="flex items-center justify-center w-full h-[52px] transition-colors border-none cursor-pointer"
+                style={{
+                  backgroundColor: !entryAmount || Number(entryAmount) <= 0 ? "#2D2D2D" : "#FFD600",
+                  cursor: !entryAmount || Number(entryAmount) <= 0 ? "not-allowed" : "pointer",
+                }}
               >
-                <span className="font-grotesk text-[13px] font-bold text-[#0A0A0A] tracking-[2px]">REVIEW & CONFIRM →</span>
+                <span
+                  className="font-grotesk text-[13px] font-bold tracking-[2px]"
+                  style={{ color: !entryAmount || Number(entryAmount) <= 0 ? "#555" : "#0A0A0A" }}
+                >
+                  REVIEW & CONFIRM →
+                </span>
               </button>
             </div>
           </div>

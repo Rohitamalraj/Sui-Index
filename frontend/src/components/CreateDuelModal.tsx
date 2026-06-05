@@ -177,6 +177,8 @@ export default function CreateDuelModal({ isOpen, onClose, onDuelCreated }: Crea
             {/* Entry amount */}
             <div className="p-6 bg-[#0D0D0D] border border-[#2D2D2D]">
               <span className="font-ibm-mono text-[10px] font-bold text-[#888] tracking-[2px] mb-3 block">ENTRY AMOUNT (SUI)</span>
+
+              {/* Quick-pick presets */}
               <div className="flex gap-[2px]">
                 {["0.1", "0.25", "0.5", "0.75", "1"].map((amt) => (
                   <button
@@ -197,6 +199,41 @@ export default function CreateDuelModal({ isOpen, onClose, onDuelCreated }: Crea
                   </button>
                 ))}
               </div>
+
+              {/* Manual input */}
+              <div className="flex items-center gap-[2px] mt-[2px]">
+                <div
+                  className="flex items-center flex-1 h-[48px] px-4 gap-3 bg-[#111111] border-2 transition-colors"
+                  style={{
+                    borderColor: !["0.1","0.25","0.5","0.75","1"].includes(entryAmount) && entryAmount !== ""
+                      ? "#FFD600"
+                      : "#2D2D2D",
+                  }}
+                >
+                  <span className="font-ibm-mono text-[10px] text-[#555] tracking-[1px] shrink-0">CUSTOM</span>
+                  <input
+                    type="number"
+                    min="0.01"
+                    step="0.01"
+                    placeholder="e.g. 3.5"
+                    value={entryAmount}
+                    onChange={(e) => {
+                      const v = e.target.value;
+                      if (v === "" || Number(v) >= 0) setEntryAmount(v);
+                    }}
+                    className="flex-1 bg-transparent font-grotesk text-[16px] font-bold text-[#F5F5F0] tracking-[-0.5px] outline-none placeholder-[#333] w-full"
+                    style={{ appearance: "textfield" }}
+                  />
+                  <span className="font-ibm-mono text-[11px] text-[#555] shrink-0">SUI</span>
+                </div>
+              </div>
+
+              {/* Validation hint */}
+              {entryAmount !== "" && Number(entryAmount) <= 0 && (
+                <p className="font-ibm-mono text-[10px] text-[#FF5F57] tracking-[1px] mt-2">
+                  AMOUNT MUST BE GREATER THAN 0
+                </p>
+              )}
             </div>
 
             {/* Duration */}
@@ -248,9 +285,19 @@ export default function CreateDuelModal({ isOpen, onClose, onDuelCreated }: Crea
                 </button>
                 <button
                   onClick={handleConfirm}
-                  className="flex items-center justify-center flex-[2] h-[48px] bg-[#FFD600] hover:bg-[#e6c200] transition-colors border-none cursor-pointer"
+                  disabled={!entryAmount || Number(entryAmount) <= 0}
+                  className="flex items-center justify-center flex-[2] h-[48px] transition-colors border-none cursor-pointer"
+                  style={{
+                    backgroundColor: !entryAmount || Number(entryAmount) <= 0 ? "#2D2D2D" : "#FFD600",
+                    cursor: !entryAmount || Number(entryAmount) <= 0 ? "not-allowed" : "pointer",
+                  }}
                 >
-                  <span className="font-grotesk text-[12px] font-bold text-[#0A0A0A] tracking-[2px]">REVIEW & CONFIRM →</span>
+                  <span
+                    className="font-grotesk text-[12px] font-bold tracking-[2px]"
+                    style={{ color: !entryAmount || Number(entryAmount) <= 0 ? "#555" : "#0A0A0A" }}
+                  >
+                    REVIEW & CONFIRM →
+                  </span>
                 </button>
               </div>
             </div>
